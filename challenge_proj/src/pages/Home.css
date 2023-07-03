@@ -3,7 +3,9 @@
   src: url('./FONTS/Alkatra-Regular.ttf');
 }
 
-
+*{
+  font-family: regular;
+}
 
 ion-avatar ion-img {
   width: 4rem;
@@ -152,9 +154,7 @@ body {
 .card-btn {
   background: #f5f1ff;
 }
-.message {
-  padding: 2rem;
-}
+
 .message-avatar {
   display: flex;
   align-items: center;
@@ -163,6 +163,7 @@ body {
   width: 98px;
   background: #e5dcff;
   border-radius: 50%;
+  
 }
 .message-img {
   width: 50px;

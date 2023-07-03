@@ -42,10 +42,15 @@ import {
   logoLinkedin,
   logoFacebook,
   logoTwitter,
+  arrowUpCircle,
 } from "ionicons/icons";
-import aos from '@capacitor/app'
+import React, { useRef } from "react";
 
 const Home: React.FC = () => {
+  const contentRef = useRef<HTMLIonContentElement | null>(null);
+  const scrollToTop = () => {
+    contentRef.current && contentRef.current.scrollToTop(2500);
+  };
   const paths = [
     {
       name: "Home",
@@ -76,11 +81,7 @@ const Home: React.FC = () => {
     <>
       <div className="menu">
         <IonMenu contentId="main-content">
-          <IonHeader>
-            <IonToolbar>
-              <IonTitle>Menu Content</IonTitle>
-            </IonToolbar>
-          </IonHeader>
+       
           <IonContent>
             <div
               className="menu-items"
@@ -102,8 +103,8 @@ const Home: React.FC = () => {
         </IonMenu>
       </div>
 
-      <IonPage id="main-content" >
-        <IonHeader >
+      <IonPage id="main-content">
+        <IonHeader>
           <IonToolbar>
             <div className="menu">
               <IonButtons slot="start">
@@ -131,7 +132,7 @@ const Home: React.FC = () => {
             </div>
           </IonToolbar>
         </IonHeader>
-        <IonContent>
+        <IonContent ref={contentRef} scrollEvents={true}>
           <div className="body">
             <div className="body-text-wrapper">
               <div className="body-text">
@@ -141,14 +142,14 @@ const Home: React.FC = () => {
                   <span className="customer-side"> communication </span> for
                   your business
                 </h2>
-                <p style={{padding:'.4rem 5rem'}}>
+                <p style={{ padding: ".4rem 5rem" }}>
                   WeCare is your friendly customer support for your business.
                   Call centers are constantly under pressure to clear backlogs
-                  while offering  assistance simultaneously. Chatbots,
-                  virtual assistants, and other AI-powered interfaces take off
-                  the burden by addressing typical user queries and
-                  issues. This enables the customer support representatives to
-                  have more time to resolve complicated issues.
+                  while offering assistance simultaneously. Chatbots, virtual
+                  assistants, and other AI-powered interfaces take off the
+                  burden by addressing typical user queries and issues. This
+                  enables the customer support representatives to have more time
+                  to resolve complicated issues.
                 </p>
               </div>
             </div>
@@ -203,10 +204,10 @@ const Home: React.FC = () => {
                             Good morning, I would like to obtain all the
                             statements of my transaction with your bank for the
                             last 3 years, as it is needed to process my Visa at
-                            the American  Embassy. Please I would appreciate  if
+                            the American Embassy. Please I would appreciate if
                             it is done speedily, Thank you.
                           </p>
-                        </div> 
+                        </div>
                       </IonCardContent>
                     </IonCard>
                   </article>
@@ -507,7 +508,7 @@ const Home: React.FC = () => {
                       <h2>Subscribe</h2>
                     </li>
                     <li>
-                      <form action="" style={{display:'inline-flex'}}>
+                      <form action="" style={{ display: "inline-flex" }}>
                         <input
                           type="text"
                           name=""
@@ -516,19 +517,27 @@ const Home: React.FC = () => {
                           placeholder="Get products updates"
                         />
                         <div className="footer-icon">
-                        <IonIcon
-                          icon={arrowForward}
-                      
-                        ></IonIcon>
-
+                          <IonIcon icon={arrowForward}></IonIcon>
                         </div>
-                    
                       </form>
                     </li>
+                    <li></li>
                   </ul>
                 </div>
               </div>
-              <IonFooter></IonFooter>
+
+              <IonToolbar color={"tertiary"}>
+                <IonIcon
+                  icon={arrowUpCircle}
+                  slot="end"
+                  onClick={() => scrollToTop()}
+                  style={{
+                    fontSize: "3rem",
+                    color: "#EFF6FF",
+                    cursor: "pointer",
+                  }}
+                ></IonIcon>
+              </IonToolbar>
 
               <IonCard
                 style={{
@@ -539,8 +548,13 @@ const Home: React.FC = () => {
                 <IonCardContent>
                   <IonToolbar color={"tertiary"}>
                     <div className="socials" slot="start">
-                      <li style={{display:'flex', gap:'2rem', fontSize:'1.6rem'}}>
-                        
+                      <li
+                        style={{
+                          display: "flex",
+                          gap: "2rem",
+                          fontSize: "1.6rem",
+                        }}
+                      >
                         <IonIcon icon={logoLinkedin}></IonIcon>
                         <IonIcon icon={logoFacebook}></IonIcon>
                         <IonIcon icon={logoTwitter}></IonIcon>
