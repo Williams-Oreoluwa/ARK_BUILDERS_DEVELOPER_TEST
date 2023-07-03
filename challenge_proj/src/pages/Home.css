@@ -2,7 +2,7 @@
 
 *{
   font-family: regular;
-  color: red;
+
 }
 
 ion-avatar ion-img {
@@ -470,5 +470,5 @@ h5 {
 
 @font-face {
   font-family: 'regular';
-  src: url('./FONTS/Montserrat/Montserrat-Light.ttf');
+  src: url('/challenge_proj/public/FONTS/Montserrat/Montserrat-Light.ttf');
 }
