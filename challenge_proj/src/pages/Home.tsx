@@ -140,12 +140,12 @@ const Home: React.FC = () => {
                   <span className="customer-side"> communication </span> for
                   your business
                 </h2>
-                <p>
+                <p style={{padding:'.4rem 5rem'}}>
                   WeCare is your friendly customer support for your business.
                   Call centers are constantly under pressure to clear backlogs
-                  while offering <br /> assistance simultaneously. Chatbots,
+                  while offering  assistance simultaneously. Chatbots,
                   virtual assistants, and other AI-powered interfaces take off
-                  the burden by addressing typical user <br /> queries and
+                  the burden by addressing typical user queries and
                   issues. This enables the customer support representatives to
                   have more time to resolve complicated issues.
                 </p>
@@ -202,10 +202,10 @@ const Home: React.FC = () => {
                             Good morning, I would like to obtain all the
                             statements of my transaction with your bank for the
                             last 3 years, as it is needed to process my Visa at
-                            the Americam Embassy. Please I would appreciate if
+                            the American  Embassy. Please I would appreciate  if
                             it is done speedily, Thank you.
                           </p>
-                        </div>
+                        </div> 
                       </IonCardContent>
                     </IonCard>
                   </article>
@@ -239,7 +239,7 @@ const Home: React.FC = () => {
                             Good Afternoon James, Please find attached your
                             transaction statement from 2020 till 2022. I believe
                             that this would be useful in your visa application.
-                            We wish you all the best. Have a blessed day.{" "}
+                            We wish you all the br best. Have a blessed day.{" "}
                             <img
                               src="./mdi_tick-all.png"
                               style={{ width: "9px", height: "9px" }}

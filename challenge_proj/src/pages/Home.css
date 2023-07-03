@@ -1,7 +1,18 @@
+@font-face {
+  font-family: regular;
+  src: url('./FONTS/Alkatra-Regular.ttf');
+}
+
+*{
+  font-family: regular;
+}
+
 ion-avatar ion-img {
   width: 4rem;
   height: 4rem;
 }
+
+
 li {
   list-style: none;
 }
@@ -106,7 +117,7 @@ body {
 .bottom-img {
   position: relative;
   top: -25rem;
-  left: -9.8rem;
+  left: -8.9rem;
   transform: scale(-30deg);
 }
 .bottom-arrow-img {
@@ -137,10 +148,8 @@ body {
   padding: 1rem 1rem;
 }
 .card-btns {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-top: 1rem;
-  gap: 2rem;
+  display: flex;
+  gap:1rem;
 }
 .card-btn {
   background: #f5f1ff;
