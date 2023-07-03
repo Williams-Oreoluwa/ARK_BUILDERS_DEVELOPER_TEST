@@ -1,11 +1,9 @@
 @font-face {
-  font-family: regular;
+  font-family: 'regular';
   src: url('./FONTS/Alkatra-Regular.ttf');
 }
 
-*{
-  font-family: regular;
-}
+
 
 ion-avatar ion-img {
   width: 4rem;

@@ -43,6 +43,7 @@ import {
   logoFacebook,
   logoTwitter,
 } from "ionicons/icons";
+import aos from '@capacitor/app'
 
 const Home: React.FC = () => {
   const paths = [
