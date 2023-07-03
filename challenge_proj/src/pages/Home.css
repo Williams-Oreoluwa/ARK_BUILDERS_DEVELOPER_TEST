@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'regular';
-  src: url('./FONTS/Alkatra-Regular.ttf');
-}
+
 
 *{
   font-family: regular;
@@ -16,9 +13,7 @@ ion-avatar ion-img {
 li {
   list-style: none;
 }
-.nav-btn {
-  color: red;
-}
+
 body {
   background: #fdfaff;
 }
@@ -470,4 +465,9 @@ h5 {
   .footer-searchbar {
     width: 12rem;
   }
+}
+
+@font-face {
+  font-family: 'regular';
+  src: url('./FONTS/Montserrat/Montserrat-Light.ttf');
 }
