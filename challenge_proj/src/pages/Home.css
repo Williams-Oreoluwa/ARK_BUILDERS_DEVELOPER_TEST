@@ -1,15 +1,11 @@
-
-
-*{
-  font-family: regular;
-
-}
-
 ion-avatar ion-img {
   width: 4rem;
   height: 4rem;
 }
 
+* {
+  font-family: regular;
+}
 
 li {
   list-style: none;
@@ -24,7 +20,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0.3rem 3rem;
-  background:white;
+  background: white;
 }
 .nav-links {
   display: flex;
@@ -145,7 +141,7 @@ body {
 }
 .card-btns {
   display: flex;
-  gap:1rem;
+  gap: 1rem;
 }
 .card-btn {
   background: #f5f1ff;
@@ -159,7 +155,6 @@ body {
   width: 98px;
   background: #e5dcff;
   border-radius: 50%;
-  
 }
 .message-img {
   width: 50px;
@@ -263,7 +258,7 @@ body {
 }
 .grid-header h2 {
   font-size: 2rem;
-  font-family: 600;
+  font-weight: 600;
   color: #552bcc;
 }
 .footer {
@@ -469,6 +464,6 @@ h5 {
 }
 
 @font-face {
-  font-family: 'regular';
-  src: url('/challenge_proj/public/FONTS/Montserrat/Montserrat-Light.ttf');
+  font-family: "regular";
+  src: url("./FONTS/Montserrat/Montserrat-Light.ttf");
 }
