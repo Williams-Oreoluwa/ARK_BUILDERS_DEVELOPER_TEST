@@ -21,6 +21,7 @@ import {
   IonIcon,
   IonFooter,
   IonSearchbar,
+  IonProgressBar,
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
 import "./Home.css";
@@ -44,13 +45,11 @@ import {
   logoTwitter,
   arrowUpCircle,
 } from "ionicons/icons";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 const Home: React.FC = () => {
   const contentRef = useRef<HTMLIonContentElement | null>(null);
-  const scrollToTop = () => {
-    contentRef.current && contentRef.current.scrollToTop(2500);
-  };
+
   const paths = [
     {
       name: "Home",
@@ -77,6 +76,28 @@ const Home: React.FC = () => {
       url: "/home",
     },
   ];
+  const [visible, setVisible] = useState(false)
+  
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300){
+      setVisible(true)
+    } 
+    else if (scrolled <= 300){
+      setVisible(false)
+    }
+  };
+  
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
+  
+  window.addEventListener('scroll', toggleVisible);
   return (
     <>
       <div className="menu">
@@ -315,6 +336,7 @@ const Home: React.FC = () => {
                           >
                             Download all
                           </a>
+                    
                         </IonButtons>
                       </IonCardContent>
                     </IonCard>
@@ -322,6 +344,7 @@ const Home: React.FC = () => {
                 </section>
               </div>
             </div>
+        
             <section className="message">
               <IonItem lines="none">
                 <IonText slot="start">
@@ -525,19 +548,9 @@ const Home: React.FC = () => {
                   </ul>
                 </div>
               </div>
+            
 
-              <IonToolbar color={"tertiary"}>
-                <IonIcon
-                  icon={arrowUpCircle}
-                  slot="end"
-                  onClick={() => scrollToTop()}
-                  style={{
-                    fontSize: "3rem",
-                    color: "#EFF6FF",
-                    cursor: "pointer",
-                  }}
-                ></IonIcon>
-              </IonToolbar>
+       
 
               <IonCard
                 style={{
